@@ -45,7 +45,7 @@ if ($null -eq $objUser)
 #
 # assignment user AD attributes to variables used in signature creation
 #
-$strWebsite = "www.bankmillennium.pl"
+$strWebsite = "www.pepug.org"
 
 $strName = $objUser.FullName
 $strFirstName = $objUser.givenName
@@ -61,7 +61,8 @@ $strPhone = $objUser.homePhone
 $strMainPhone = $objUser.telephonenumber
 $strMobile = $objUser.mobile
 $strEmail = $objUser.mail
-$strteam = $objuser.physicalDeliveryOfficeName
+$strteam = $objuser.division
+$stroffice = $objuser.physicalDeliveryOfficeName
 $strDep = $objUser.department
 
 #
@@ -121,7 +122,7 @@ if ($strMobile.length -gt 0)
     $stream.WriteLine("mob: $strMobile<br>")
 }
 $stream.WriteLine("<br>")
-$stream.WriteLine("<span><img border=0 width=402 height=133 src=`"https://exofficewebapp.bankmillennium.pl/Stopka-Millennium.png`"></span>")
+$stream.WriteLine("<span><img border=0 width=402 height=133 src=`"https://www.pepug.org/Stopka.png`"></span>")
 $stream.WriteLine("<br>")
 $stream.WriteLine("</div>")
 $stream.close()
