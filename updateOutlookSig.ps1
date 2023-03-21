@@ -130,7 +130,7 @@ $stream.close()
 #
 # Creates RTF Signature
 #
-$wrd = new-object -com word.application 
+$wrd = new-object -ComObject word.application 
 
 # Make Word Visible 
 $wrd.visible = $false
@@ -149,9 +149,8 @@ $wrd.ActiveDocument.Saveas($name,$opt)
 #
 $EmailOptions = $wrd.EmailOptions
 $EmailSignature = $EmailOptions.EmailSignature
-#$EmailSignatureEntries = $EmailSignature.EmailSignatureEntries
-$EmailSignature.NewMessageSignature=$signaturefile
-$EmailSignature.ReplyMessageSignature=$signaturefile
+$EmailSignature.NewMessageSignature = $signaturefile
+$EmailSignature.ReplyMessageSignature = $signaturefile
 
 # Close word
 $wrd.Quit()
